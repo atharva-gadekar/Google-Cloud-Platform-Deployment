@@ -3,6 +3,8 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 from pyngrok import ngrok
 
+from sklearn.ensemble import RandomForestRegressor
+
 app = Flask(__name__)
 model = pickle.load(open('randomForestRegressor.pkl', 'rb'))
 
